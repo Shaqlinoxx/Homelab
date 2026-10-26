@@ -72,15 +72,10 @@ This is a simplified overview rather than a complete network diagram. Only the s
 The repository may grow to include documentation and sanitised examples such as:
 
 ```text
-.
+
 ├── README.md
-├── docs/
-│   ├── network-overview.md
-│   ├── service-setup.md
-│   ├── troubleshooting.md
-│   └── backup-and-recovery.md
-└── configs/
-    └── examples/       # Sanitised examples only — no secrets
+
+ 
 ```
 
 ## 📝 Documentation Approach
