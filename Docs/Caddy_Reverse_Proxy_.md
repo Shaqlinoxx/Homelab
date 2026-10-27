@@ -22,6 +22,27 @@ A client device connects to Caddy over HTTPS. Caddy forwards the request to the 
 
 ---
 
+## Prerequisites
+
+<b>Accounts and configuration</b>
+- A registered domain managed through Cloudflare.
+- A Cloudflare API token with Zone:DNS:Edit and Zone:Zone:Read permissions.
+- Access to the Caddy server terminal and root/sudo privileges.
+- Access to the Cloudflare DNS settings and AdGuard Home dashboard.
+- Basic familiarity with Linux commands, DNS records, IP addresses, and reverse proxies.
+
+<b>Hardware and infrastructure</b>
+- A physical or virtual machine to host Caddy.
+- A working homelab network.
+- A Proxmox server hosting your virtualisation environment.
+- A TrueNAS server for NAS services.
+
+<b>Software requirements</b>
+- Debian 13 (Trixie) installed on the Caddy server.
+- Caddy v2.11.7 with the Cloudflare DNS provider module installed.
+- AdGuard Home for local DNS rewrites.
+- Access to the Proxmox and TrueNAS web interfaces.
+
 ## 1. Understand the network layout
 
 1. A device opens `https://proxmox.fortuin.online` or `https://nas.fortuin.online`.
