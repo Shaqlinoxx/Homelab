@@ -197,13 +197,20 @@ proxmox.fortuin.online {
         }
     }
 }
-
 nas.fortuin.online {
     tls {
         dns cloudflare {env.CLOUDFLARE_API_TOKEN}
     }
 
-    reverse_proxy 192.168.1.21:80
+    reverse_proxy https://192.168.1.21:443 {
+        header_up Host {host}
+
+        transport http {
+            tls_insecure_skip_verify
+        }
+
+        header_down Location https://192.168.1.21:443 https://nas.fortuin.online
+    }
 }
 ```
 
