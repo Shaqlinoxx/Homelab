@@ -97,6 +97,8 @@ These certificates do not conflict simply because both are used in the same setu
 
 ## 3. AdGuard DNS rewrite
 
+A wildcard DNS rewrite may already cover `cloud.fortuin.online`. If so, do not create a duplicate rule; verify that the result is `192.168.1.19`.
+
 For local network access, create a DNS rewrite in AdGuard:
 
 | Domain | Rewrite address |
@@ -111,7 +113,6 @@ The existing names remain separate:
 - `proxmox.fortuin.online` → Caddy → Proxmox (`192.168.1.22:8006`)
 - `cloud.fortuin.online` → Caddy → Nextcloud (`192.168.1.21:30027`)
 
-A wildcard DNS rewrite may already cover `cloud.fortuin.online`. If so, do not create a duplicate rule; verify that the result is `192.168.1.19`.
 
 ## 4. What is the Caddyfile?
 
