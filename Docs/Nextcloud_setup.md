@@ -37,11 +37,11 @@ The TrueNAS Apps pool is set to `tank`. TrueNAS manages its hidden `ix-apps` dat
 For a Host Path storage deployment, the recommended layout is:
 
 ```text
-tank/
-└── nextcloud/
-    ├── html/          # Nextcloud application files
-    ├── data/          # User files and documents
-    └── postgres_data/ # PostgreSQL database files
+MPOOL/
+└── appconfig/
+   └── nextcloud_database  #PostgreSQL database files   
+├── nextcloud_data  # User files and documents
+    
 ```
 
 The `nextcloud` parent dataset is optional; it keeps the three datasets together. The three child datasets are the useful storage separation. If ixVolumes are used instead, TrueNAS creates and manages the app storage under `ix-apps` automatically.
